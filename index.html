@@ -1,71 +1,39 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>哇哈哈</title>
-	</head>
+
+<style>
+#result1 {
+	background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/97/39/7f/caption.jpg?w=1200&h=-1&s=1&cx=1920&cy=1080&chk=v1_f31158e4bb953d28a308);
+	background-size: 300px 100px;
+	background-color: red;
+	width: 100px;
+	height: 100px;
+}
+#result2 {
+	background-image:url(https://s30876.pcdn.co/wp-content/uploads/Japan.jpg.optimal.jpg); 
+	background-size:  300px 100px;
+	background-color: blue;
+	width: 300px;
+	height: 100px;
+}
+</style>
+
+<div id='result1'>
+</div>
+
+<div id='result2'>
+</div>
+
+<script>
+let message = "hello";
+
+let x = 1;
+let y = 3.1415;
+let z = x < y;
+document.querySelector("#result1").innerText = x;
+document.querySelector("#result2").innerText = y;
 
 
-	<body>
-		<h1> BMI計算器 </h1>
 
-		<table border="2">
-			<tr>
-				<th>身高</th>
-				<th>體重</th>
-			</tr>
-			<tr>
-				<td><input type="number" id="height" name="height" placeholder="公尺"></td>
-				<td><input type="number" id="weight" name="weight" placeholder="公斤"></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>
-					<button id="calculator" onclick="calculate()">計算</button>
-				</td>
-			</tr>
-		</table>
 
-		<script type="text/javascript">
-			function calculate() {
-				let height = document.querySelector("#height").value; // 取得身高
-				let weight = document.querySelector("#weight").value; // 取得體重
-				alert("身高"+height);
-				alert("體重"+weight);
-				let bmi = weight / (height * height); // 計算BMI
-				alert("bmi"+bmi);
-				if (bmi < 18.5) {
-					alert("體重過輕");
-				} else if ( bmi >= 18.5 && bmi < 24) {
-					alert("健康體位");
-				} else {
-					alert("體位異常");
-				}
-			}
-		</script>
 
-		<h1> 哈哈哈 </h1>
 
-		<table border="2">
-			<tr>
-				<th>書名</th>
-				<th>作者</th>
-			</tr>
-			<tr>
-				<td>鏈鋸人</td>
-				<td>藤本樹</td>
-			</tr>
-			<tr>
-				<td>七龍珠</td>
-				<td>鳥山明</td>
-			</tr>
-		</table>
-		
-		<h2>HTML Table</h2>
-		<h3> H3 </h3>
-		<h4> H4 </h4>
-		<h5> H5 </h5>
-		<h6> H6 </h6>
-
-		這是我的網頁
-	</body>
-</html>
+</script>
