@@ -1,7 +1,8 @@
 <html>
 <head>
 	<title>顯示與隱藏</title>
-	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
 	<style>
 		.korea img{
 			width: auto;
@@ -48,6 +49,7 @@
 
 		.news_title {
 			background-color: rgba(0, 0, 0, 0.5);
+			font-family: "Audiowide", 新細明體, serif;
 		}
 	</style>
 
@@ -317,6 +319,7 @@
 			elements[i].style.display = "inline-block";
 		}
 		document.querySelector("body").style.backgroundImage="url(https://upload.wikimedia.org/wikipedia/commons/c/cc/NewJeans_theMEGASTUDY.jpg)";
+		document.querySelector("#backgroundVideo").src="jeffery.mp4";
 	}
 
 	function hideSeventeen() {
@@ -353,7 +356,12 @@
 	}
 
 	window.addEventListener("click", function(){
-		document.querySelector("#backgroundVideo").play();
+			let video = document.querySelector("#backgroundVideo");
+		if (video.paused) {
+			video.play();
+		} else {
+			video.pause();
+		}
 	});
 </script>
 </body>
